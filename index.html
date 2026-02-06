@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bikelife</title>
     <style>
+          body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        font-size: 2rem;
+        color: white;
+        background-color: black;
+        transition: background-color 0.5s ease;
+        cursor: pointer;
+    }
       {
             margin: 0;
             padding: 0;
@@ -82,8 +95,32 @@
             font-size: 0.9rem;
         }
     </style>
+    .parallax {
+    /* The image used */
+    background-image: url('img_parallax.jpg');
+
+    /* Set a specific height */
+    height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 </head>
 <body>
+      🎨 Click anywhere for a rainbow surprise!
+    <script>
+    // Array of rainbow colors
+    const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+
+    document.body.addEventListener("click", () => {
+        // Pick a random color from the array
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        document.body.style.backgroundColor = randomColor;
+    });
+</script>
 
     <header>
         <h1>BIKELIFE</h1>
@@ -98,7 +135,7 @@
         <img src="https://www.freeworldmaps.net/europe/united-kingdom/lincolnshire/lincolnshire-map.jpg" alt="Sample Photo" width="400" height="300">
          <img src="https://www.freeworldmaps.net/europe/united-kingdom/lincolnshire/lincolnshire-map.jpg" alt="Sample Photo" width="400" height="300">
         < <img src="https://www.freeworldmaps.net/europe/united-kingdom/lincolnshire/lincolnshire-map.jpg" alt="Sample Photo" width="400" height="300">
-        <h2>Photos</h2>
+        
         <p></p>
      <section>
          <section id="1">
@@ -110,6 +147,14 @@
         <h2>Sidequests to do</h2>
         <p>we need stuff to do</p>
     </section>
+        <div class="parallax"></div>
+
+  <div style="height:1000px;background-color:lavender;font-size:36px">
+    Scroll Up and Down this page to see the parallax scrolling effect.
+    This div is just here to enable scrolling.
+    Tip: Try to remove the background-attachment property to remove the scrolling effect.
+  </div>
+
     </main>
 
     <footer>
